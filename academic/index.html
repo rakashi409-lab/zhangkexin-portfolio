@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>张可欣 · 高校岗位简历（行政 / 教师）</title>
+<meta name="description" content="张可欣，湖北工业大学工业设计学院产品设计专业 2026 届本科毕业生，应聘高校行政岗与设计类专业教师岗，提供 5 套 A4 简历下载。">
+<style>
+:root{
+  --bg:#F4F2ED; --surface:#FFFFFF; --surface-2:#FAF9F6;
+  --ink:#1B1B1D; --ink-2:#3C3C40; --ink-3:#6E6E73; --ink-4:#9A9A9F;
+  --line:rgba(0,0,0,.10); --line-2:rgba(0,0,0,.06);
+  --accent:#1F3A5F; --accent-2:#8C5A2B; --accent-soft:rgba(31,58,95,.08);
+  --r-lg:16px; --r-md:12px; --r-sm:8px;
+  --shadow:0 1px 2px rgba(20,25,40,.04),0 10px 28px -16px rgba(20,25,40,.16);
+  --shadow-h:0 2px 4px rgba(20,25,40,.05),0 26px 52px -24px rgba(20,25,40,.26);
+  --serif:"Source Han Serif SC","Noto Serif SC","Songti SC","SimSun","PingFang SC",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","HarmonyOS Sans SC","MiSans","Microsoft YaHei",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+/* 顶栏 */
+.nav{position:sticky;top:0;z-index:50;background:rgba(244,242,237,.86);backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line-2)}
+.nav-in{max-width:1160px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.nav-name{font-family:var(--serif);font-size:19px;font-weight:700;letter-spacing:.08em}
+.nav-sub{font-size:13px;color:var(--ink-3);border-left:1px solid var(--line);padding-left:16px}
+.nav-sp{flex:1}
+.nav a.lnk{font-size:13.5px;color:var(--ink-3);display:inline-flex;align-items:center;min-height:44px;padding:0 4px;transition:color .2s}
+.nav a.lnk:hover{color:var(--accent)}
+
+/* 首屏 */
+.hero{padding:64px 0 40px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.16em;color:var(--accent);
+  font-weight:700;text-transform:uppercase;margin-bottom:20px}
+.eyebrow::before{content:'';width:22px;height:1.5px;background:var(--accent)}
+h1{font-family:var(--serif);font-size:46px;line-height:1.28;font-weight:700;letter-spacing:.01em;
+  max-width:22em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--accent);border-bottom:2px solid rgba(31,58,95,.24)}
+.lede{margin-top:22px;font-size:16.5px;color:var(--ink-2);max-width:50em}
+.hero-meta{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px 28px;font-size:14px;color:var(--ink-3)}
+.hero-meta b{color:var(--ink);font-weight:600}
+.hero-acts{margin-top:34px;display:flex;flex-wrap:wrap;gap:12px}
+
+/* 按钮 */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 22px;
+  border-radius:var(--r-sm);font-size:14.5px;font-weight:600;border:1px solid transparent;cursor:pointer;
+  transition:transform .18s,box-shadow .18s,background .2s,color .2s;font-family:inherit;white-space:nowrap}
+.btn:active{transform:translateY(1px)}
+.btn-p{background:var(--accent);color:#fff;box-shadow:0 8px 20px -12px rgba(31,58,95,.7)}
+.btn-p:hover{background:#18304F;box-shadow:0 14px 30px -14px rgba(31,58,95,.8)}
+.btn-g{background:var(--surface);color:var(--ink);border-color:var(--line)}
+.btn-g:hover{border-color:rgba(31,58,95,.4);color:var(--accent)}
+.btn-s{min-height:40px;padding:0 16px;font-size:13.5px}
+.btn-p.sm{min-height:40px;padding:0 16px;font-size:13.5px}
+
+/* 工具条 */
+.bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:0 0 26px}
+.tabs{display:flex;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px}
+.tab{min-height:44px;padding:0 18px;border:0;background:transparent;border-radius:999px;font-family:inherit;
+  font-size:14px;font-weight:600;color:var(--ink-3);cursor:pointer;transition:.2s}
+.tab[aria-selected="true"]{background:var(--accent);color:#fff}
+.tab:hover[aria-selected="false"]{color:var(--accent)}
+.count{font-size:13.5px;color:var(--ink-3)}
+
+/* 卡片网格 */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;padding-bottom:72px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;
+  display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .28s cubic-bezier(.2,.7,.3,1),box-shadow .28s,border-color .28s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-h);border-color:rgba(31,58,95,.28)}
+.card[hidden]{display:none}
+.thumb{display:block;background:var(--surface-2);padding:16px 16px 0;border-bottom:1px solid var(--line-2)}
+.thumb img{width:100%;height:auto;border:1px solid var(--line);border-bottom:0;border-radius:4px 4px 0 0;
+  background:#fff;transition:opacity .25s}
+.thumb:hover img{opacity:.94}
+.card-b{padding:20px;display:flex;flex-direction:column;flex:1}
+.meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.tag{font-size:12px;font-weight:700;letter-spacing:.06em;padding:3px 10px;border-radius:999px;
+  background:var(--accent-soft);color:var(--accent)}
+.tag-t{background:rgba(140,90,43,.10);color:var(--accent-2)}
+.style{font-size:12.5px;color:var(--ink-4)}
+.card h3{font-family:var(--serif);font-size:19px;font-weight:700;line-height:1.4;letter-spacing:.01em}
+.card p{margin-top:10px;font-size:14px;color:var(--ink-3);line-height:1.72;flex:1}
+.acts{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.acts .btn{flex:1;min-width:0}
+
+/* 说明区 */
+.notes{background:var(--surface);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+.notes-in{padding:56px 0;display:grid;grid-template-columns:1.1fr 1fr;gap:44px}
+.notes h2{font-family:var(--serif);font-size:26px;font-weight:700;margin-bottom:18px}
+.notes p{font-size:15px;color:var(--ink-2);margin-bottom:14px}
+.notes ul{list-style:none;font-size:15px;color:var(--ink-2)}
+.notes li{position:relative;padding-left:20px;margin-bottom:12px}
+.notes li::before{content:'';position:absolute;left:2px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.notes li b{color:var(--ink)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;font-size:14.5px;align-content:start}
+.kv dt{color:var(--ink-3);white-space:nowrap}
+.kv dd{color:var(--ink)}
+
+/* 页脚 */
+.foot{padding:52px 0 64px;display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;align-items:flex-end}
+.foot h2{font-family:var(--serif);font-size:24px;font-weight:700;margin-bottom:12px}
+.foot p{font-size:14px;color:var(--ink-3)}
+.foot .contact{font-size:15px;color:var(--ink);line-height:2}
+.foot .contact b{font-weight:600}
+.copy{font-size:12.5px;color:var(--ink-4)}
+
+/* 滚动淡入 */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.3,1)}
+.rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:1024px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  h1{font-size:38px}
+  .notes-in{grid-template-columns:1fr;gap:32px}
+}
+@media (max-width:680px){
+  .wrap,.nav-in{padding-left:18px;padding-right:18px}
+  .hero{padding:40px 0 28px}
+  h1{font-size:29px;line-height:1.34}
+  .lede{font-size:15.5px;margin-top:16px}
+  .hero-meta{gap:8px 18px;font-size:13.5px}
+  .hero-acts .btn{flex:1;min-width:132px}
+  .grid{grid-template-columns:1fr;gap:20px;padding-bottom:52px}
+  .nav-sub{display:none}
+  .tabs{width:100%;justify-content:space-between}
+  .tab{flex:1;padding:0 10px}
+  .bar{padding-bottom:18px}
+  .notes-in{padding:40px 0}
+  .foot{padding:36px 0 48px;flex-direction:column;align-items:flex-start}
+  .card h3{font-size:18px}
+}
+@media print{
+  .nav,.hero-acts,.bar,.acts,.thumb{display:none!important}
+  body{background:#fff}
+  .card{break-inside:avoid;box-shadow:none;border:1px solid #ddd}
+  .grid{grid-template-columns:1fr 1fr;gap:14px}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-in">
+    <span class="nav-name">张可欣</span>
+    <span class="nav-sub">高校岗位简历库 · 行政 / 教师</span>
+    <span class="nav-sp"></span>
+    <a class="lnk" href="#list">全部版式</a>
+    <a class="lnk" href="#info">应聘信息</a>
+    <a class="lnk" href="#contact">联系方式</a>
+    <button class="btn btn-g btn-s" type="button" id="printBtn">打印 / 导出本页</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <div class="eyebrow">高校行政岗 · 设计类专业教师岗</div>
+    <h1>五套 A4 简历，按<em>行政</em>与<em>教学</em>两条线分别打磨。</h1>
+    <p class="lede">
+      湖北工业大学工业设计学院产品设计专业 2026 届本科毕业生。行政向突出学生工作、文书归档、数据核对与沟通服务；
+      教师向突出主修课程成绩、毕业设计与作品成果、完整设计流程的实操经验。每套均为单页 A4，可直接投递或打印。
+    </p>
+    <div class="hero-meta">
+      <span><b>学历</b>　本科 / 学士</span>
+      <span><b>专业</b>　产品设计</span>
+      <span><b>成绩</b>　GPA 3.5</span>
+      <span><b>英语</b>　CET-4 · 428 分</span>
+      <span><b>到岗</b>　可随时到岗</span>
+    </div>
+    <div class="hero-acts">
+      <a class="btn btn-p" href="#list">查看五套版式</a>
+      <a class="btn btn-g" href="resume-01-counselor.pdf" target="_blank" rel="noopener" download>下载辅导员岗 PDF</a>
+    </div>
+  </section>
+
+  <section class="wrap" id="list">
+    <div class="bar">
+      <div class="tabs" role="tablist" aria-label="按岗位筛选">
+        <button class="tab" role="tab" aria-selected="true" data-f="all">全部</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="行政岗">行政岗</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="教师岗">教师岗</button>
+      </div>
+      <span class="count" id="count">共 5 套</span>
+    </div>
+    <div class="grid" id="grid">
+      <article class="card rv" data-tag="行政岗">
+        <a class="thumb" href="resume-01-counselor.html" target="_blank" rel="noopener" aria-label="在线预览 辅导员 · 学生工作岗位">
+          <img src="previews/resume-01-counselor.png" alt="辅导员 · 学生工作岗位 简历预览" loading="lazy" width="794" height="1123">
+        </a>
+        <div class="card-b">
+          <div class="meta"><span class="tag tag-a">行政岗</span><span class="style">稳重单栏 · 靛蓝</span></div>
+          <h3>辅导员 · 学生工作岗位</h3>
+          <p>以学生工作经历为主线：宿舍考勤、全院课堂点名数据汇总、志愿服务现场组织，突出事务执行力与沟通耐心，适合辅导员与学生工作类岗位。</p>
+          <div class="acts">
+            <a class="btn btn-p" href="resume-01-counselor.html" target="_blank" rel="noopener">在线预览</a>
+            <a class="btn btn-g" href="resume-01-counselor.pdf" target="_blank" rel="noopener" download>下载 PDF</a>
+          </div>
+        </div>
+      </article>
+      <article class="card rv" data-tag="行政岗">
+        <a class="thumb" href="resume-02-registrar.html" target="_blank" rel="noopener" aria-label="在线预览 教务管理 · 教学秘书">
+          <img src="previews/resume-02-registrar.png" alt="教务管理 · 教学秘书 简历预览" loading="lazy" width="794" height="1123">
+        </a>
+        <div class="card-b">
+          <div class="meta"><span class="tag tag-a">行政岗</span><span class="style">左主右辅双栏 · 墨绿</span></div>
+          <h3>教务管理 · 教学秘书</h3>
+          <p>以文书与数据能力为主线：200 余份文件归档、1200 余条数据核对、台账制作与格式规范，贴合教务管理、教学秘书的日常工作内容。</p>
+          <div class="acts">
+            <a class="btn btn-p" href="resume-02-registrar.html" target="_blank" rel="noopener">在线预览</a>
+            <a class="btn btn-g" href="resume-02-registrar.pdf" target="_blank" rel="noopener" download>下载 PDF</a>
+          </div>
+        </div>
+      </article>
+      <article class="card rv" data-tag="行政岗">
+        <a class="thumb" href="resume-03-general.html" target="_blank" rel="noopener" aria-label="在线预览 综合管理 · 院系办公室干事">
+          <img src="previews/resume-03-general.png" alt="综合管理 · 院系办公室干事 简历预览" loading="lazy" width="794" height="1123">
+        </a>
+        <div class="card-b">
+          <div class="meta"><span class="tag tag-a">行政岗</span><span class="style">深色侧栏 · 藏蓝</span></div>
+          <h3>综合管理 · 院系办公室干事</h3>
+          <p>行政事务、服务沟通与学生工作并重，信息分区清晰，适合院系办公室、综合管理等岗位的通用投递。</p>
+          <div class="acts">
+            <a class="btn btn-p" href="resume-03-general.html" target="_blank" rel="noopener">在线预览</a>
+            <a class="btn btn-g" href="resume-03-general.pdf" target="_blank" rel="noopener" download>下载 PDF</a>
+          </div>
+        </div>
+      </article>
+      <article class="card rv" data-tag="教师岗">
+        <a class="thumb" href="resume-04-faculty.html" target="_blank" rel="noopener" aria-label="在线预览 专任教师 · 助教（设计类）">
+          <img src="previews/resume-04-faculty.png" alt="专任教师 · 助教（设计类） 简历预览" loading="lazy" width="794" height="1123">
+        </a>
+        <div class="card-b">
+          <div class="meta"><span class="tag tag-t">教师岗</span><span class="style">学术衬线 · 棕金</span></div>
+          <h3>专任教师 · 助教（设计类）</h3>
+          <p>衬线学术风格，以主修课程成绩、毕业设计与论文成果为主线，突出专业功底、研究思路与教研潜力。</p>
+          <div class="acts">
+            <a class="btn btn-p" href="resume-04-faculty.html" target="_blank" rel="noopener">在线预览</a>
+            <a class="btn btn-g" href="resume-04-faculty.pdf" target="_blank" rel="noopener" download>下载 PDF</a>
+          </div>
+        </div>
+      </article>
+      <article class="card rv" data-tag="教师岗">
+        <a class="thumb" href="resume-05-teaching.html" target="_blank" rel="noopener" aria-label="在线预览 专业教学 · 实训指导教师">
+          <img src="previews/resume-05-teaching.png" alt="专业教学 · 实训指导教师 简历预览" loading="lazy" width="794" height="1123">
+        </a>
+        <div class="card-b">
+          <div class="meta"><span class="tag tag-t">教师岗</span><span class="style">衬线留白 · 青灰</span></div>
+          <h3>专业教学 · 实训指导教师</h3>
+          <p>强调完整设计流程的实操经验与作品成果，从材料调研到实物成型均有落地案例，适合设计类专业教学与实训指导岗位。</p>
+          <div class="acts">
+            <a class="btn btn-p" href="resume-05-teaching.html" target="_blank" rel="noopener">在线预览</a>
+            <a class="btn btn-g" href="resume-05-teaching.pdf" target="_blank" rel="noopener" download>下载 PDF</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="notes" id="info">
+    <div class="wrap notes-in">
+      <div>
+        <h2>关于这几套简历</h2>
+        <p>十套面向设计岗的版式之外，专门为高校岗位重做了内容口径：把「设计能力」的表达换成「学生事务 / 文书数据 / 教学科研」的表达，并补上主修课程成绩、毕业设计与论文成果。</p>
+        <ul>
+          <li><b>行政向（01—03）</b>：学生工作与校园经历前置，强调宿舍考勤、课堂点名数据汇总、文件归档、台账制作与现场组织。</li>
+          <li><b>教师向（04—05）</b>：主修课程成绩与毕业设计、论文成果前置，完整呈现从材料调研到实物成型的落地过程。</li>
+          <li><b>统一口径</b>：单页 A4、白底双色、无证书栏（教师资格证与普通话等级证书暂未取得，如有需要可在取得后补入）。</li>
+        </ul>
+      </div>
+      <div>
+        <h2>应聘信息</h2>
+        <dl class="kv">
+          <dt>应聘方向</dt><dd>高校行政岗（辅导员 / 教务 / 综合管理）· 设计类专业教师岗</dd>
+          <dt>工作地点</dt><dd>武汉及周边，可接受调剂</dd>
+          <dt>毕业院校</dt><dd>湖北工业大学 · 工业设计学院</dd>
+          <dt>学历学位</dt><dd>本科 · 学士（2026 年 6 月毕业）</dd>
+          <dt>主修课程</dt><dd>家具专题设计 93、设计沟通 92、趣味性家居产品设计 90、专题设计（三）智能设计 90、人因工程 89</dd>
+          <dt>毕业设计</dt><dd>《解构竹韵：模块化竹材首饰设计》· 获评优秀毕业设计</dd>
+          <dt>毕业论文</dt><dd>《竹材特性与现代首饰创新的适配性研究》· 获评优秀毕业论文</dd>
+          <dt>英语水平</dt><dd>大学英语四级 CET-4 · 428 分</dd>
+          <dt>办公软件</dt><dd>Word 长文排版 · Excel 数据核对 · PPT 演示制作</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <footer class="wrap foot" id="contact">
+    <div>
+      <h2>欢迎联系</h2>
+      <div class="contact">
+        <div><b>电话</b>　13260502236</div>
+        <div><b>邮箱</b>　zhangwan1133@163.com</div>
+        <div><b>现居</b>　湖北 · 武汉</div>
+      </div>
+    </div>
+    <div class="copy">
+      张可欣 · 高校岗位简历 · 2026<br>
+      湖北工业大学 工业设计学院 · 产品设计
+    </div>
+  </footer>
+</main>
+
+<script>
+(function(){
+  // 筛选
+  var tabs = document.querySelectorAll('.tab');
+  var cards = document.querySelectorAll('.card');
+  var count = document.getElementById('count');
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(x){ x.setAttribute('aria-selected', String(x === t)); });
+      var f = t.dataset.f, n = 0;
+      cards.forEach(function(c){
+        var show = (f === 'all' || c.dataset.tag === f);
+        c.hidden = !show; if (show) n++;
+      });
+      count.textContent = '共 ' + n + ' 套';
+    });
+  });
+  // 打印
+  document.getElementById('printBtn').addEventListener('click', function(){ window.print(); });
+  // 原生滚动下的淡入（IO 可靠）
+  var rvs = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    rvs.forEach(function(el, i){ el.style.transitionDelay = Math.min(i % 3, 2) * 70 + 'ms'; io.observe(el); });
+  } else {
+    rvs.forEach(function(el){ el.classList.add('on'); });
+  }
+})();
+</script>
+</body>
+</html>
