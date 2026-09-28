@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>张可欣 · 高校行政 / 教师岗 · 个人主页</title>
+<meta name="description" content="张可欣，湖北工业大学工业设计学院产品设计专业 2026 届本科毕业生，应聘高校行政岗（辅导员 / 教务 / 综合管理）与设计类专业教师岗。">
+<meta name="theme-color" content="#F2EFE9">
+<style>
+:root{
+  --paper:#F2EFE9; --paper-2:#FAF8F4; --card:#FFFFFF;
+  --ink:#17171A; --ink-2:#3A3A40; --ink-3:#6E6E74; --ink-4:#A0A0A4;
+  --line:rgba(0,0,0,.115); --line-2:rgba(0,0,0,.055);
+  --accent:#1D3A5F; --accent-2:#2E6B8F; --accent-soft:rgba(29,58,95,.075);
+  --seal:#A8342A;
+  --serif:"Source Han Serif SC","Noto Serif SC","Songti SC","SimSun",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","HarmonyOS Sans SC","MiSans","Microsoft YaHei",sans-serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,monospace;
+  --rail:72px;
+  --ease:cubic-bezier(.16,.84,.3,1);
+}
+html[data-dir="teach"]{
+  --accent:#1D3A2F; --accent-2:#8C5A2B; --accent-soft:rgba(29,58,47,.075);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.78;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .7s var(--ease)}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+time{font-variant-numeric:tabular-nums}
+em{font-style:normal}
+::selection{background:var(--accent);color:#fff}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+/* ---------- 开卷 ---------- */
+#loader{position:fixed;inset:0;z-index:999;background:var(--paper);display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:22px;transition:opacity .7s ease,visibility .7s}
+#loader.off{opacity:0;visibility:hidden;pointer-events:none}
+.ld-name{font-family:var(--serif);font-size:30px;font-weight:700;letter-spacing:.34em;text-indent:.34em;
+  opacity:0;animation:ldIn .9s .15s var(--ease) forwards}
+.ld-sub{font-family:var(--mono);font-size:11px;letter-spacing:.3em;color:var(--ink-4);text-transform:uppercase;
+  opacity:0;animation:ldIn .9s .35s var(--ease) forwards}
+.ld-bar{width:150px;height:1px;background:var(--line);position:relative;overflow:hidden}
+.ld-bar i{position:absolute;inset:0;background:var(--accent);transform:scaleX(0);transform-origin:left;
+  animation:ldBar 1.15s .1s var(--ease) forwards}
+@keyframes ldIn{to{opacity:1}}
+@keyframes ldBar{to{transform:scaleX(1)}}
+
+/* ---------- 顶栏 + 进度 ---------- */
+#prog{position:fixed;top:0;left:0;height:2px;width:100%;z-index:120;background:transparent;pointer-events:none}
+#prog i{display:block;height:100%;width:0;background:var(--accent);transition:background .7s var(--ease)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:110;background:rgba(242,239,233,.82);
+  backdrop-filter:blur(16px) saturate(1.6);-webkit-backdrop-filter:blur(16px) saturate(1.6);
+  border-bottom:1px solid transparent;transition:border-color .35s,background .7s var(--ease)}
+.nav.stuck{border-bottom-color:var(--line-2)}
+.nav-in{max-width:1240px;margin:0 auto;padding:0 30px;height:64px;display:flex;align-items:center;gap:20px;min-width:0}
+.nav-id{font-family:var(--serif);font-size:17px;font-weight:700;letter-spacing:.2em;white-space:nowrap;flex:none}
+.nav-sub{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:var(--ink-4);text-transform:uppercase;
+  border-left:1px solid var(--line);padding-left:20px;white-space:nowrap}
+.nav-sp{flex:1}
+.nav-l{font-size:13.5px;color:var(--ink-3);padding:0 2px;transition:color .25s;white-space:nowrap}
+.nav-l:hover,.nav-l.on{color:var(--accent)}
+.nav-l.on{font-weight:600}
+.nav-links{display:flex;gap:20px;align-items:center}
+/* 方向切换 */
+.sw{display:flex;gap:3px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px;flex:none;
+  max-width:100%;min-width:0}
+.sw-b{min-height:40px;padding:0 15px;border:0;background:transparent;border-radius:999px;font-family:inherit;
+  font-size:12.5px;font-weight:700;color:var(--ink-3);cursor:pointer;transition:background .35s,color .35s;white-space:nowrap}
+.sw-b[aria-selected="true"]{background:var(--accent);color:#fff}
+.sw-b:hover[aria-selected="false"]{color:var(--accent)}
+
+/* ---------- 左栏竖排目录 ---------- */
+.rail{position:fixed;left:0;top:64px;bottom:0;width:var(--rail);z-index:100;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
+.rail-t{writing-mode:vertical-rl;font-family:var(--mono);font-size:10.5px;letter-spacing:.42em;color:var(--ink-4);
+  text-orientation:mixed}
+.rail-line{width:1px;flex:1;max-height:120px;background:var(--line-2);position:relative}
+.rail-line i{position:absolute;left:0;top:0;width:100%;background:var(--accent);height:0;
+  transition:background .7s var(--ease)}
+
+/* ---------- 通用 ---------- */
+.wrap{max-width:1240px;margin:0 auto;padding:0 30px 0 calc(var(--rail) + 30px)}
+.sec{padding:74px 0;border-top:1px solid var(--line-2);position:relative}
+.sec:first-of-type{border-top:0}
+.s-h{display:flex;align-items:baseline;gap:16px;margin-bottom:34px;position:relative}
+.s-no{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.06em;flex:none;
+  transition:color .7s var(--ease)}
+.s-h h2{font-family:var(--serif);font-size:27px;font-weight:700;letter-spacing:.04em;line-height:1.3;flex:none}
+.s-en{font-family:var(--mono);font-size:10.5px;letter-spacing:.24em;color:var(--ink-4);text-transform:uppercase;
+  white-space:nowrap;padding-bottom:4px}
+.s-rule{flex:1;height:1px;background:var(--line-2);position:relative;top:-4px}
+.s-rule::after{content:'';position:absolute;left:0;top:0;height:100%;width:0;background:var(--accent);
+  transition:width 1.05s var(--ease)}
+.sec.on .s-rule::after{width:100%}
+.s-note{font-size:13.5px;color:var(--ink-3)}
+
+/* 卡片 */
+.card{background:var(--card);border:1px solid var(--line-2);border-radius:14px;padding:26px 28px;margin-bottom:14px;
+  position:relative;transition:transform .35s var(--ease),box-shadow .35s,border-color .35s,opacity .3s}
+.card::before,.card::after{content:'';position:absolute;width:11px;height:11px;opacity:0;
+  transition:opacity .35s,border-color .7s var(--ease)}
+.card::before{top:13px;left:13px;border-top:1px solid var(--accent);border-left:1px solid var(--accent)}
+.card::after{bottom:13px;right:13px;border-bottom:1px solid var(--accent);border-right:1px solid var(--accent)}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -26px rgba(20,25,40,.45);border-color:var(--line)}
+.card:hover::before,.card:hover::after{opacity:1}
+.c-h{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.c-h h3{font-family:var(--serif);font-size:17.5px;font-weight:700;letter-spacing:.01em;line-height:1.45}
+.c-h time{font-family:var(--mono);font-size:11.5px;color:var(--ink-4);letter-spacing:.04em;margin-left:auto;white-space:nowrap}
+.role{font-size:13px;color:var(--accent);margin-top:5px;font-weight:600;letter-spacing:.01em;transition:color .7s var(--ease)}
+.card .bul{list-style:none;margin-top:14px;display:grid;gap:8px}
+.card .bul li{position:relative;padding-left:17px;font-size:14px;color:var(--ink-2);line-height:1.76}
+.card .bul li::before{content:'';position:absolute;left:0;top:.72em;width:5px;height:1px;background:var(--ink-4)}
+
+/* 时间轴 */
+.tl{position:relative;padding-left:30px}
+.tl::before{content:'';position:absolute;left:4px;top:6px;bottom:22px;width:1px;background:var(--line-2)}
+.tl-fill{position:absolute;left:4px;top:6px;width:1px;background:var(--accent);height:0;origin:top;transform-origin:top;
+  transition:background .7s var(--ease)}
+.tl-i{position:relative;margin-bottom:26px}
+.tl-i:last-child{margin-bottom:0}
+.tl-dot{position:absolute;left:-30px;top:9px;width:9px;height:9px;border-radius:50%;background:var(--paper);
+  border:1.5px solid var(--accent);transition:border-color .7s var(--ease),transform .4s var(--ease)}
+.tl-i:hover .tl-dot{transform:scale(1.35)}
+.tl-h{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:3px}
+.tl-h h3{font-family:var(--serif);font-size:18px;font-weight:700}
+.tl-h h3 em{font-size:14px;color:var(--ink-3);font-weight:400;margin-left:2px}
+.tl-h time{font-family:var(--mono);font-size:11.5px;color:var(--ink-4);margin-left:auto;white-space:nowrap}
+.meta{font-size:12.5px;color:var(--ink-3);letter-spacing:.01em}
+.tl-b .bul{list-style:none;margin-top:12px;display:grid;gap:8px}
+.tl-b .bul li{position:relative;padding-left:17px;font-size:14px;color:var(--ink-2);line-height:1.76}
+.tl-b .bul li::before{content:'';position:absolute;left:0;top:.72em;width:5px;height:1px;background:var(--ink-4)}
+
+/* 成绩 */
+.gs{display:grid;grid-template-columns:1fr 1fr;gap:11px 40px}
+.g{display:grid;grid-template-columns:auto 1fr 34px;align-items:center;gap:14px}
+.g-k{font-size:13.5px;color:var(--ink-2);white-space:nowrap}
+.g-t{height:3px;background:var(--line-2);border-radius:2px;overflow:hidden}
+.g-t i{display:block;height:100%;width:0;background:var(--accent);border-radius:2px;
+  transition:width 1.15s var(--ease),background .7s var(--ease)}
+.g-n{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--accent);text-align:right;
+  transition:color .7s var(--ease);font-variant-numeric:tabular-nums}
+.gs-note{margin-top:24px;font-size:13.5px;color:var(--ink-3);padding-top:20px;border-top:1px solid var(--line-2)}
+.gs-note b{color:var(--accent);font-weight:700}
+
+/* 荣誉 */
+.hn{display:grid;gap:0}
+.hn-r{display:grid;grid-template-columns:auto 1fr auto auto;align-items:baseline;gap:16px;padding:15px 4px;
+  border-bottom:1px solid var(--line-2);transition:background .3s}
+.hn-r:hover{background:var(--accent-soft)}
+.hn-mk{width:5px;height:5px;border-radius:50%;background:var(--accent);align-self:center;flex:none;
+  transition:background .7s var(--ease)}
+.hn-r b{font-family:var(--serif);font-size:15.5px;font-weight:700}
+.hn-r span{font-size:13px;color:var(--ink-3)}
+.hn-r i{font-family:var(--mono);font-size:11.5px;color:var(--ink-4);font-style:normal;white-space:nowrap;margin-left:auto}
+
+/* 技能 */
+.sk{margin-bottom:20px}
+.sk-t{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;color:var(--ink-4);text-transform:uppercase;
+  margin-bottom:11px;padding-bottom:9px;border-bottom:1px solid var(--line-2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-size:13.5px;color:var(--ink-2);background:var(--card);border:1px solid var(--line-2);
+  border-radius:999px;padding:7px 16px;transition:border-color .25s,color .25s,transform .25s var(--ease),background .7s var(--ease)}
+.chips span:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+
+/* 规划 / 适配 */
+.pl{display:grid;gap:0}
+.pl-r{display:grid;grid-template-columns:auto 1fr;gap:22px;padding:22px 4px;border-bottom:1px solid var(--line-2);
+  transition:background .3s}
+.pl-r:hover{background:var(--accent-soft)}
+.pl-n{font-family:var(--serif);font-size:19px;color:var(--accent);opacity:.42;line-height:1.3;
+  transition:color .7s var(--ease),opacity .3s}
+.pl-r:hover .pl-n{opacity:.95}
+.pl-r b{font-family:var(--serif);font-size:15.5px;font-weight:700;display:block;margin-bottom:5px}
+.pl-r p{font-size:13.8px;color:var(--ink-2);line-height:1.78}
+
+/* 自述 */
+.ev{position:relative;padding-left:24px;border-left:2px solid var(--accent);transition:border-color .7s var(--ease)}
+.ev p{font-size:14.5px;color:var(--ink-2);line-height:1.92;margin-bottom:13px}
+.ev p:last-child{margin-bottom:0;color:var(--ink-3);font-size:13.5px}
+.ev-b[hidden]{display:none}
+
+/* ---------- 方向切换时的线内强调 ---------- */
+[data-line]{transition:opacity .45s var(--ease),filter .45s var(--ease)}
+body[data-dir="admin"] [data-line="teach"],
+body[data-dir="teach"] [data-line="admin"]{opacity:.62}
+body[data-dir="admin"] [data-line="admin"],
+body[data-dir="teach"] [data-line="teach"]{opacity:1}
+
+/* ---------- 封底 ---------- */
+.foot{padding:78px 0 96px;border-top:1px solid var(--line)}
+.foot-in{display:grid;grid-template-columns:1.15fr 1fr;gap:52px;align-items:start}
+.foot h2{font-family:var(--serif);font-size:31px;font-weight:700;letter-spacing:.03em;line-height:1.34}
+.foot h2 em{color:var(--accent);transition:color .7s var(--ease)}
+.foot .say{margin-top:16px;font-size:14.5px;color:var(--ink-3);max-width:34em}
+.ct{display:grid;gap:2px;margin-top:6px}
+.ct a{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;padding:17px 2px;
+  border-bottom:1px solid var(--line-2);transition:padding .3s var(--ease),background .3s}
+.ct a:hover{padding-left:12px;background:var(--accent-soft)}
+.ct-k{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;color:var(--ink-4);text-transform:uppercase}
+.ct-v{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
+.ct-a{color:var(--ink-4);transition:transform .3s var(--ease),color .3s}
+.ct a:hover .ct-a{transform:translateX(4px);color:var(--accent)}
+.end{margin-top:44px;font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;color:var(--ink-4);
+  display:flex;align-items:center;gap:14px}
+.end::after{content:'';flex:1;height:1px;background:var(--line-2)}
+
+/* ---------- 封面 ---------- */
+.hero{padding:132px 0 74px;position:relative}
+.hero::before{content:'';position:absolute;top:64px;left:calc(var(--rail) + 30px);right:30px;height:1px;background:var(--line-2)}
+.eyebrow{display:flex;align-items:center;gap:14px;font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;
+  color:var(--accent);text-transform:uppercase;margin-bottom:26px;transition:color .7s var(--ease)}
+.eyebrow::before{content:'';width:30px;height:1px;background:var(--accent);transition:background .7s var(--ease)}
+.eyebrow .no{margin-left:auto;color:var(--ink-4)}
+.hero-grid{display:grid;grid-template-columns:1fr auto;gap:56px;align-items:start}
+.hero-name{font-family:var(--serif);font-size:clamp(46px,7.4vw,88px);font-weight:700;line-height:1.02;
+  letter-spacing:.05em;display:flex;gap:.06em;flex-wrap:wrap}
+.hero-name span{display:inline-block;opacity:0;transform:translateY(28px) rotate(1.5deg);
+  animation:chIn .95s var(--ease) forwards}
+@keyframes chIn{to{opacity:1;transform:none}}
+.hero-en{font-family:var(--mono);font-size:12px;letter-spacing:.44em;color:var(--ink-4);text-transform:uppercase;
+  margin-top:14px;padding-left:3px}
+.hero-role{margin-top:30px;padding-top:26px;border-top:1px solid var(--line-2);max-width:38em}
+.hero-role .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;color:var(--ink-4);text-transform:uppercase}
+.hero-role p{font-family:var(--serif);font-size:clamp(19px,2.3vw,25px);font-weight:700;margin-top:9px;
+  letter-spacing:.02em;line-height:1.5}
+.hero-role p em{color:var(--accent);transition:color .7s var(--ease)}
+.hero-say{margin-top:20px;font-size:14.5px;color:var(--ink-3);line-height:1.86;max-width:40em}
+.hero-facts{margin-top:36px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 34px;max-width:46em}
+.f{display:flex;flex-direction:column;gap:3px;padding-top:13px;border-top:1px solid var(--line-2)}
+.f-k{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--ink-4);text-transform:uppercase}
+.f-v{font-size:14.5px;font-weight:600;color:var(--ink)}
+/* 照片 + 印章 */
+.hero-side{width:238px;flex:none;position:relative}
+.port{position:relative;border:1px solid var(--line);background:var(--card);padding:9px}
+.port img{width:100%;height:auto;filter:saturate(.94) contrast(1.02)}
+.port svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.port svg rect{fill:none;stroke:var(--accent);stroke-width:1;stroke-dasharray:var(--perim);stroke-dashoffset:var(--perim);
+  transition:stroke .7s var(--ease)}
+.port.on svg rect{animation:draw 1.5s .25s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.port-cap{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--ink-4);text-transform:uppercase;
+  margin-top:11px;padding-right:76px;display:flex;justify-content:space-between}
+.seal{position:absolute;right:-16px;bottom:-52px;width:76px;height:76px;border:2px solid var(--seal);border-radius:5px;
+  display:flex;align-items:center;justify-content:center;background:rgba(168,52,42,.045);color:var(--seal);
+  font-family:var(--serif);font-size:13px;font-weight:700;line-height:1.16;letter-spacing:.06em;text-align:center;
+  transform:scale(1.9) rotate(-14deg);opacity:0;padding:6px}
+.seal.on{animation:stamp .6s .95s cubic-bezier(.2,1.5,.4,1) forwards, breathe 5s 1.7s ease-in-out infinite}
+@keyframes stamp{
+  0%{opacity:0;transform:scale(1.9) rotate(-14deg)}
+  62%{opacity:1;transform:scale(.94) rotate(-5deg)}
+  80%{opacity:1;transform:scale(1.03) rotate(-7.5deg)}
+  100%{opacity:1;transform:scale(1) rotate(-6.5deg)}}
+@keyframes breathe{0%,100%{opacity:1}50%{opacity:.82}}
+
+/* ---------- 滚动淡入 ---------- */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .75s var(--ease),transform .75s var(--ease)}
+.rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .hero-name span{opacity:1;transform:none;animation:none}
+  .seal{opacity:1;transform:rotate(-6.5deg);animation:none}
+  .port svg rect{stroke-dashoffset:0;animation:none}
+  #loader{display:none}
+  html{scroll-behavior:auto}
+  *{transition-duration:.01ms!important}
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1080px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero-side{width:210px}
+  .seal{right:auto;left:170px;bottom:-22px}
+  .gs{grid-template-columns:1fr}
+  .foot-in{grid-template-columns:1fr;gap:36px}
+}
+@media (max-width:820px){
+  :root{--rail:0px}
+  .rail{display:none}
+  .wrap{padding:0 20px}
+  .hero::before{left:20px;right:20px}
+  .nav-in{padding:0 20px;gap:10px}
+  .nav-sub{display:none}
+  .nav-links{display:none}
+  .nav-in{height:60px}
+  .sw{margin-left:auto}
+  .sw-b{min-height:38px;padding:0 9px;font-size:12px;letter-spacing:0}
+  .hero{padding:104px 0 56px}
+  .sec{padding:56px 0}
+  .s-h{gap:12px;margin-bottom:26px}
+  .s-h h2{font-size:22px}
+  .s-en{display:none}
+  .hero-facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px}
+  .card{padding:22px 20px}
+  .hn-r{grid-template-columns:auto 1fr;gap:6px 14px}
+  .hn-r i{margin-left:0;grid-column:2}
+  .hn-r span{grid-column:2}
+  .pl-r{gap:14px}
+  .foot h2{font-size:25px}
+}
+@media (max-width:480px){
+  .nav-id{font-size:15px;letter-spacing:.12em}
+  .nav-in{padding:0 14px;gap:8px}
+  .sw{padding:2px}
+  .sw-b{min-height:36px;padding:0 8px;font-size:11.5px}
+  .hero-name{font-size:44px}
+  .hero-side{width:172px}
+  .seal{width:62px;height:62px;font-size:11px;left:134px}
+  .hero-facts{grid-template-columns:1fr 1fr}
+  .ct a{grid-template-columns:1fr auto;gap:4px}
+  .ct-k{grid-column:1}
+}
+
+/* ---------- 打印 ---------- */
+@media print{
+  .nav,#prog,.rail,#loader,.sw,.end{display:none!important}
+  :root{--rail:0px}
+  body{background:#fff}
+  .wrap,.hero{padding-left:0;padding-right:0}
+  .rv{opacity:1!important;transform:none!important}
+  .hero-name span{opacity:1!important;transform:none!important;animation:none!important}
+  .sec{padding:26px 0;break-inside:avoid}
+  .card{box-shadow:none;break-inside:avoid}
+  .seal{opacity:1!important;transform:rotate(-6.5deg)!important;animation:none!important}
+}
+</style>
+</head>
+<body data-dir="admin">
+
+<!-- 开卷 -->
+<div id="loader">
+  <div class="ld-name">张可欣</div>
+  <div class="ld-bar"><i></i></div>
+  <div class="ld-sub">Academic Post · Portfolio</div>
+</div>
+
+<div id="prog"><i></i></div>
+
+<nav class="nav" id="nav">
+  <div class="nav-in">
+    <span class="nav-id">张可欣</span>
+    <span class="nav-sub">高校岗位 · 个人主页</span>
+    <span class="nav-sp"></span>
+    <div class="nav-links">
+      <a class="nav-l" href="#s-edu">教育</a>
+      <a class="nav-l" href="#s-grade">成绩</a>
+      <a class="nav-l" href="#s-work">实践</a>
+      <a class="nav-l" href="#s-contact">联系</a>
+    </div>
+    <div class="sw" role="tablist" aria-label="应聘方向">
+      <button class="sw-b" role="tab" aria-selected="true" data-d="admin">行政向</button>
+      <button class="sw-b" role="tab" aria-selected="false" data-d="teach">教师向</button>
+    </div>
+  </div>
+</nav>
+
+<!-- 竖排目录 -->
+<aside class="rail" aria-hidden="true">
+  <span class="rail-t">目录</span>
+  <span class="rail-line"><i></i></span>
+  <span class="rail-t" id="railNow">封面</span>
+</aside>
+
+<main>
+  <!-- 封面 -->
+  <section class="hero wrap" id="s-top">
+    <div class="eyebrow"><span>高校行政岗 · 设计类专业教师岗</span><span class="no">No. ZKX-2026</span></div>
+    <div class="hero-grid">
+      <div>
+        <h1 class="hero-name" aria-label="张可欣"><span style="animation-delay:0.72s">张</span><span style="animation-delay:0.81s">可</span><span style="animation-delay:0.90s">欣</span></h1>
+        <div class="hero-en">Zhang Kexin</div>
+
+        <div class="hero-role">
+          <span class="lbl">求职意向 / Objective</span>
+          <p id="objText">高校辅导员 / 学生工作岗位<em>。</em></p>
+        </div>
+
+        <p class="hero-say">湖北工业大学工业设计学院产品设计专业 2026 届本科毕业生。
+          行政向突出学生工作、文书归档、数据核对与沟通服务；教师向突出主修课程成绩、毕业设计与作品成果、
+          完整设计流程的实操经验。</p>
+
+        <div class="hero-facts">
+          <div class="f"><span class="f-k">学历</span><span class="f-v">本科 / 学士</span></div>
+          <div class="f"><span class="f-k">专业</span><span class="f-v">产品设计</span></div>
+          <div class="f"><span class="f-k">成绩</span><span class="f-v">GPA 3.5 · 班级排名前 50%</span></div>
+          <div class="f"><span class="f-k">英语</span><span class="f-v">CET-4 · 428 分</span></div>
+          <div class="f"><span class="f-k">地点</span><span class="f-v">武汉及周边 · 可接受调剂</span></div>
+          <div class="f"><span class="f-k">到岗</span><span class="f-v">可随时到岗</span></div>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <div class="port" id="port">
+          <img src="assets/photo_id.jpg" alt="张可欣证件照" width="960" height="1200">
+          <svg aria-hidden="true"><rect x="4" y="4" width="calc(100% - 8px)" height="calc(100% - 8px)" rx="0" style="--perim:1040;stroke-dasharray:1040"></rect></svg>
+        </div>
+        <div class="port-cap"><span>Portrait</span><span>2026</span></div>
+        <div class="seal" id="seal" aria-hidden="true">张可欣<br>印</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 教育背景 -->
+  <section class="sec wrap" id="s-edu" data-name="教育背景">
+    <header class="s-h"><span class="s-no">01</span><h2>教育背景</h2><span class="s-en">Education</span><i class="s-rule"></i></header>
+    <div class="tl"><i class="tl-fill" id="tlFill"></i>
+
+      <article class="tl-i rv" data-order="0">
+        <span class="tl-dot"></span>
+        <div class="tl-b">
+          <div class="tl-h"><h3>湖北工业大学<em>／工业设计学院</em></h3><time>2021.09 — 2026.06</time></div>
+          <p class="meta">产品设计 · 学士学位 · 全日制四年 · GPA 3.5 · 班级排名前 50%</p>
+          <ul class="bul"><li>国家级一流本科专业建设点，依托学校工科背景，秉持艺工理协同、可持续设计办学理念，设有设计学、艺术设计 MFA、工业设计工程硕士点。</li><li>核心课程：产品设计原理、人机工程学、材料与工艺、计算机辅助设计、模型制作、专题设计；毕业设计（论文）成绩 88 分。</li><li>大三起设置可持续智能家居设计、交互与信息产品设计、智能机电产品与装备设计等专业方向，注重实践创新与跨学科协作。</li></ul>
+        </div>
+      </article>
+      <article class="tl-i rv" data-order="0">
+        <span class="tl-dot"></span>
+        <div class="tl-b">
+          <div class="tl-h"><h3>武汉市第十四中学</h3><time>2018.09 — 2021.06</time></div>
+          <p class="meta">公办 · 全日制 · 本科一批录取</p>
+          
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 02 主修课程成绩 -->
+  <section class="sec wrap" id="s-grade" data-name="主修课程成绩" data-line="teach">
+    <header class="s-h"><span class="s-no">02</span><h2>主修课程成绩</h2><span class="s-en">Coursework</span><i class="s-rule"></i></header>
+    
+      <div class="gs">
+        <div class="g rv" data-v="93">
+          <span class="g-k">家具专题设计</span>
+          <span class="g-t"><i></i></span>
+          <b class="g-n">0</b>
+        </div>        <div class="g rv" data-v="92">
+          <span class="g-k">设计沟通</span>
+          <span class="g-t"><i></i></span>
+          <b class="g-n">0</b>
+        </div>        <div class="g rv" data-v="90">
+          <span class="g-k">趣味性家居产品设计</span>
+          <span class="g-t"><i></i></span>
+          <b class="g-n">0</b>
+        </div>        <div class="g rv" data-v="90">
+          <span class="g-k">专题设计（三）智能设计</span>
+          <span class="g-t"><i></i></span>
+          <b class="g-n">0</b>
+        </div>        <div class="g rv" data-v="89">
+          <span class="g-k">人因工程</span>
+          <span class="g-t"><i></i></span>
+          <b class="g-n">0</b>
+        </div>        <div class="g rv" data-v="89">
+          <span class="g-k">产品结构与设计</span>
+          <span class="g-t"><i></i></span>
+          <b class="g-n">0</b>
+        </div>        <div class="g rv" data-v="88">
+          <span class="g-k">工程图学</span>
+          <span class="g-t"><i></i></span>
+          <b class="g-n">0</b>
+        </div>        <div class="g rv" data-v="88">
+          <span class="g-k">可持续家居产品设计</span>
+          <span class="g-t"><i></i></span>
+          <b class="g-n">0</b>
+        </div>        <div class="g rv" data-v="88">
+          <span class="g-k">毕业设计（论文）</span>
+          <span class="g-t"><i></i></span>
+          <b class="g-n">0</b>
+        </div>
+      </div>
+      <p class="gs-note">主修课程 9 门均在 <b>88—93 分</b> 区间，毕业设计（论文）综合评定 88 分。</p>
+  </section>
+
+  <!-- 03 学生工作与校园经历 -->
+  <section class="sec wrap" id="s-campus" data-name="学生工作" data-line="admin">
+    <header class="s-h"><span class="s-no">03</span><h2>学生工作与校园经历</h2><span class="s-en">Campus Experience</span><i class="s-rule"></i></header>
+    
+
+      <article class="card rv" data-line="admin" data-order="0">
+        <div class="c-h"><h3>湖北工业大学工业设计学院 · 学习部</h3><time>2021.09 — 2021.11</time></div>
+        <p class="role">干事 · 面向工业设计学院全体学生</p>
+        <ul class="bul"><li>负责 1 栋女生宿舍日常查寝，每周开展 2 次宿舍考勤检查，累计完成查寝 50 余次，细致记录到寝情况，及时上报晚归、未归等异常信息。</li><li>汇总整理全院课堂点名数据，每周收集各班级考勤报表，核对出勤、缺勤信息，累计整理考勤记录 100 余份，制作出勤汇总台账，为学院学风建设提供数据参考。</li></ul>
+      </article>
+      <article class="card rv" data-line="admin" data-order="0">
+        <div class="c-h"><h3>湖北工业大学 · 校内志愿服务</h3><time>2021.09</time></div>
+        <p class="role">志愿者 · 校医院体检志愿服务</p>
+        <ul class="bul"><li>参与校医院体检志愿工作，负责现场秩序引导，协助同学核对个人信息、粘贴体检条码与标签，收集整理并分类归档体检表。</li><li>主动沟通提醒注意事项，保障体检流程顺畅有序，锻炼了信息核对能力、现场应变能力与服务意识。</li></ul>
+      </article>
+  </section>
+
+  <!-- 04 毕业设计与论文 -->
+  <section class="sec wrap" id="s-thesis" data-name="毕业设计与论文" data-line="teach">
+    <header class="s-h"><span class="s-no">04</span><h2>毕业设计与论文</h2><span class="s-en">Thesis & Graduation Project</span><i class="s-rule"></i></header>
+    
+      <article class="card thesis rv" data-line="teach" data-order="0">
+        <div class="c-h"><h3>毕业设计《解构竹韵：模块化竹材首饰设计》 · 毕业论文《竹材特性与现代首饰创新的适配性研究》</h3><time>2026.06</time></div>
+        <p class="role">独立完成 · 综合评定 88 分 · 获评优秀毕业设计、优秀毕业论文</p>
+        <ul class="bul"><li>以竹材为研究对象，完成材料特性调研、结构方案推演、模型制作到实物成型的完整设计流程，形成模块化竹材首饰设计成果。</li><li>论文围绕竹材特性与现代首饰创新的适配性展开研究，梳理材料工艺与设计表达的对应关系，答辩成绩 88 分。</li><li>毕业设计获北京民艺非物质文化遗产研究院专题报道，并于湖北工业大学第八届设计艺术节、湖北工人文化宫一蓑书店展出。</li></ul>
+      </article>
+  </section>
+
+  <!-- 05 实习与实践 -->
+  <section class="sec wrap" id="s-work" data-name="实习与实践">
+    <header class="s-h"><span class="s-no">05</span><h2>实习与实践</h2><span class="s-en">Internship & Practice</span><i class="s-rule"></i></header>
+    
+
+      <article class="card rv" data-order="1">
+        <div class="c-h"><h3>武汉微保汇科技发展有限公司</h3><time>2024.07</time></div>
+        <p class="role">综合组 · 文员（实习） · 信息传输、软件和信息技术服务业 · 实习考核优秀</p>
+        <ul class="bul"><li>分类扫描归档公司日常文件与合同资料 200 余份，搭建并完善电子台账，资料查找效率提升约 20%。</li><li>承担基础数据录入与核对，累计录入业务信息 1200 余条，逐条校验修正错误，数据准确率达 98% 以上。</li><li>负责会议通知、物资登记与日常办公后勤，统计办公用品领用情况并做好登记记录，保障部门日常运转。</li></ul>
+      </article>
+      <article class="card rv" data-order="1">
+        <div class="c-h"><h3>武汉大方工业设计有限公司</h3><time>2026.01</time></div>
+        <p class="role">产品 2 线 2D 创意组 · AI 工程师（实习） · 工业设计 · 实习考核优秀</p>
+        <ul class="bul"><li>独立整理转化 20 余组三轮车手绘草图，提取车身比例、车灯、轮胎等关键设计元素，运用 AI 工具批量生成设计方案。</li><li>产出 50 余张不同风格效果图，覆盖自然光、展台、赛博朋克等场景，以及哑光、金属、磨砂等车漆材质表现。</li><li>完整参与「手绘草图—AI 生成—细节调整—效果图输出」流程，独立完成车身造型、配色、材质与场景氛围的修改。</li></ul>
+      </article>
+      <article class="card rv" data-order="1">
+        <div class="c-h"><h3>武汉百联奥特莱斯 Michael Kors 专卖店</h3><time>2026.09</time></div>
+        <p class="role">综合组 · 店员（兼职） · 零售 · 外商独资 · 兼职考核优秀</p>
+        <ul class="bul"><li>每日整理陈列区货品，核对近 300 件包袋的吊牌与价格标签，及时调整陈列、补齐缺货款式，陈列完整度提升约 20%。</li><li>参与门店分享型直播 30 场，单场平均展示 25 款产品，讲解设计细节与 Jet-Set 风格特点，带动直播间互动。</li><li>协助完成每日台账登记，累计整理 40 余份库存记录，及时反馈缺货信息，减少断货漏记问题。</li></ul>
+      </article>
+      <article class="card rv" data-order="1">
+        <div class="c-h"><h3>久伴商店</h3><time>2025.07 — 2025.08</time></div>
+        <p class="role">店员（兼职） · 零售 · 兼职考核优秀</p>
+        <ul class="bul"><li>参与女装直播间运营 42 场，单场 3—4 小时、累计超 140 小时，配合展示服饰款式 280 余款。</li><li>直播前整理检查 70—90 件在售款，核对尺码、吊牌、面料并搭配成套穿搭，将直播中服装问题出错率降低约 15%。</li><li>每场平均回复观众咨询 80—120 条，解答尺码、版型、发货、面料等问题，助力单场平均成交订单提升约 5 笔。</li></ul>
+      </article>
+  </section>
+
+  <!-- 06 荣誉与考核 -->
+  <section class="sec wrap" id="s-honor" data-name="荣誉与考核">
+    <header class="s-h"><span class="s-no">06</span><h2>荣誉与考核</h2><span class="s-en">Honors</span><i class="s-rule"></i></header>
+    
+      <div class="hn">
+        <div class="hn-r rv">
+          <span class="hn-mk"></span>
+          <b>优秀毕业设计 · 优秀毕业论文</b>
+          <span>校级 · 个人</span>
+          <i>2026.06</i>
+        </div>        <div class="hn-r rv">
+          <span class="hn-mk"></span>
+          <b>作品参展与专题报道</b>
+          <span>设计艺术节展出 / 民艺非遗研究院</span>
+          <i>2026.06</i>
+        </div>        <div class="hn-r rv">
+          <span class="hn-mk"></span>
+          <b>实习考核优秀</b>
+          <span>大方工业设计 · AI 工程师</span>
+          <i>2026.01</i>
+        </div>        <div class="hn-r rv">
+          <span class="hn-mk"></span>
+          <b>实习考核优秀</b>
+          <span>微保汇科技 · 文员</span>
+          <i>2024.07</i>
+        </div>
+      </div>
+  </section>
+
+  <!-- 07 技能 -->
+  <section class="sec wrap" id="s-skill" data-name="技能">
+    <header class="s-h"><span class="s-no">07</span><h2>技能与语言</h2><span class="s-en">Skills</span><i class="s-rule"></i></header>
+    
+
+      <div class="sk rv" data-line="admin">
+        <div class="sk-t">办公与文书</div>
+        <div class="chips"><span>Word 长文排版与格式规范</span><span>Excel 数据录入与核对</span><span>PPT 演示文稿制作</span><span>文件分类归档与版本管理</span></div>
+      </div>
+      <div class="sk rv" data-line="admin">
+        <div class="sk-t">学生事务</div>
+        <div class="chips"><span>宿舍考勤与数据汇总</span><span>信息核对与台账制作</span><span>通知传达与现场组织</span><span>会议与物资事务跟进</span></div>
+      </div>
+      <div class="sk rv" data-line="admin">
+        <div class="sk-t">沟通协作</div>
+        <div class="chips"><span>客户与观众沟通解答</span><span>志愿服务现场协调</span><span>团队配合与事务跟进</span><span>换位思考与服务意识</span></div>
+      </div>
+      <div class="sk rv" data-line="teach">
+        <div class="sk-t">专业工具</div>
+        <div class="chips"><span>计算机辅助设计</span><span>三维建模与效果渲染</span><span>工程图学</span><span>材料与工艺</span><span>模块化设计</span><span>AI 辅助设计</span></div>
+      </div>
+      <div class="sk rv" data-line="teach">
+        <div class="sk-t">语言能力</div>
+        <div class="chips"><span>大学英语四级 CET-4 · 428 分（2026.02）</span><span>可阅读简单英文专业文献</span><span>基础英文书面表达</span></div>
+      </div>
+  </section>
+
+  <!-- 08 岗位适配 -->
+  <section class="sec wrap" id="s-match" data-name="岗位适配" data-line="admin">
+    <header class="s-h"><span class="s-no">08</span><h2>岗位适配说明</h2><span class="s-en">Fit for the Role</span><i class="s-rule"></i></header>
+    
+      <div class="ev-b" data-line="admin">
+      <div class="pl">
+        <div class="pl-r rv" data-order="0">
+          <span class="pl-n">壹</span>
+          <div><b>学生工作经历</b><p>担任学院学习部干事，负责宿舍考勤与全院课堂点名数据汇总，熟悉学生日常事务的流程与口径。</p></div>
+        </div>        <div class="pl-r rv" data-order="1">
+          <span class="pl-n">贰</span>
+          <div><b>文书与数据能力</b><p>完成 200 余份文件归档、1200 余条数据核对，具备台账制作、资料管理与格式规范经验。</p></div>
+        </div>        <div class="pl-r rv" data-order="2">
+          <span class="pl-n">叁</span>
+          <div><b>组织与服务经验</b><p>多次参与志愿服务与现场引导，累计接待、解答线上线下咨询对象上千人次，沟通耐心、回应及时。</p></div>
+        </div>        <div class="pl-r rv" data-order="3">
+          <span class="pl-n">肆</span>
+          <div><b>办公工具与语言</b><p>熟练使用 Word / Excel / PPT；大学英语四级 428 分，可阅读简单英文专业文献。</p></div>
+        </div>
+      </div></div>
+      <div class="ev-b" data-line="teach" hidden>
+      <div class="pl">
+        <div class="pl-r rv" data-order="0">
+          <span class="pl-n">壹</span>
+          <div><b>专业课程功底</b><p>家具专题设计、人因工程、产品结构与设计等主修课程成绩 88—93 分，GPA 3.5，专业基础扎实。</p></div>
+        </div>        <div class="pl-r rv" data-order="1">
+          <span class="pl-n">贰</span>
+          <div><b>完整流程实操</b><p>独立完成 20 余组手绘草图转化与 50 余张效果图制作，从材料调研、方案推演到实物成型全程参与。</p></div>
+        </div>        <div class="pl-r rv" data-order="2">
+          <span class="pl-n">叁</span>
+          <div><b>毕业设计与成果</b><p>毕业设计（论文）综合评定 88 分，获评优秀毕业设计与优秀毕业论文，作品获专业机构专题报道并在校内外展出。</p></div>
+        </div>        <div class="pl-r rv" data-order="3">
+          <span class="pl-n">肆</span>
+          <div><b>表达与指导经验</b><p>在校承担学生工作与志愿服务，具备事务组织与现场讲解经验；大学英语四级 428 分，可阅读英文专业文献。</p></div>
+        </div>
+      </div></div>
+  </section>
+
+  <!-- 09 职业规划 -->
+  <section class="sec wrap" id="s-plan" data-name="职业规划">
+    <header class="s-h"><span class="s-no">09</span><h2>职业规划</h2><span class="s-en">Career Plan</span><i class="s-rule"></i></header>
+    
+      <div class="pl">
+        <div class="pl-r rv" data-order="0">
+          <span class="pl-n">壹</span>
+          <div><b>短期（1 年内）</b><p>熟悉学校规章制度与教学、行政工作流程，虚心向同事与前辈请教，尽快完成从学生到教职工的角色转变，独立规范地承担岗位职责。</p></div>
+        </div>        <div class="pl-r rv" data-order="1">
+          <span class="pl-n">贰</span>
+          <div><b>中期（2—3 年）</b><p>在做好本职工作基础上持续打磨专业与业务能力，参与课程建设、学生指导或教研、专项工作，逐步形成稳定可靠的工作方法。</p></div>
+        </div>        <div class="pl-r rv" data-order="2">
+          <span class="pl-n">叁</span>
+          <div><b>长期（3—5 年）</b><p>在岗积累经验，配合团队做好传帮带，助力学院教学与学生工作发展，成为岗位上可靠、可托付的一员。</p></div>
+        </div>
+      </div>
+  </section>
+
+  <!-- 10 自我评价 -->
+  <section class="sec wrap" id="s-eval" data-name="自我评价">
+    <header class="s-h"><span class="s-no">10</span><h2>自我评价</h2><span class="s-en">About Me</span><i class="s-rule"></i></header>
+    <div class="ev" id="evBox">
+      <div class="ev-b" data-line="admin"><p>产品设计专业本科毕业生，具备良好的文字、数据与事务处理能力。行政类实习中分类归档文件与合同资料 200 余份，搭建电子台账使查找效率提升约 20%；累计录入并核对业务信息 1200 余条，数据准确率达 98% 以上；同时承担会议通知、物资登记与后勤保障，熟悉办公流程与规范。在校担任学习部干事，每周收集各班级考勤报表并制作出勤汇总台账，具备持续的数据整理与对接沟通经验。熟练使用 Word 完成正式文档排版与格式规范，可用 Excel 进行数据录入、基础函数运算与统计，能独立制作逻辑清晰的演示文稿。</p><p>不足之处是有时过于关注局部细节，对整体任务的时间规划与优先级判断仍需加强，后续会平衡细节与效率，提前做好统筹。</p></div>
+      <div class="ev-b" data-line="teach"><p>产品设计专业本科毕业生，专业基础扎实，具备较强的设计实践与表达能力。在校系统学习产品设计原理、人机工程学、材料与工艺、计算机辅助设计、模型制作等课程，主修课程成绩 88—93 分，GPA 3.5；毕业设计（论文）综合评定 88 分，获评优秀毕业设计与优秀毕业论文，设计作品获专业机构专题报道并在校内外展出。设计实践中独立完成 20 余组手绘草图转化与 50 余张效果图制作，完整参与从草图到成品图的设计流程，具备将创意推进到可视成果的实操经验；同时担任学院学习部干事、参与志愿服务，具备一定的学生沟通与事务组织能力。</p><p>不足之处是有时过于关注局部细节，对整体任务的时间规划与优先级判断仍需加强，后续会平衡细节与效率，提前做好统筹。</p></div>
+    </div>
+  </section>
+
+  <!-- 封底 -->
+  <footer class="foot wrap" id="s-contact" data-name="联系方式">
+    <div class="foot-in">
+      <div>
+        <h2>期待与您共事，<br>把每件小事<em>做扎实</em>。</h2>
+        <p class="say">五套 A4 简历可按岗位方向取用，行政向与教师向各成体系，欢迎随时联系索取或安排面试。</p>
+        <div class="end">张可欣 · 高校岗位 · 2026</div>
+      </div>
+      <div class="ct">
+        <a href="tel:13260502236"><span class="ct-k">Phone</span><span class="ct-v">132 6050 2236</span><span class="ct-a">→</span></a>
+        <a href="mailto:zhangwan1133@163.com"><span class="ct-k">Email</span><span class="ct-v">zhangwan1133@163.com</span><span class="ct-a">→</span></a>
+        <a href="./"><span class="ct-k">Resumes</span><span class="ct-v">查看五套 A4 简历</span><span class="ct-a">→</span></a>
+        <a href="../"><span class="ct-k">Design</span><span class="ct-v">设计岗个人主页</span><span class="ct-a">→</span></a>
+      </div>
+    </div>
+  </footer>
+</main>
+
+<script>
+(function(){
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var params = new URLSearchParams(location.search);
+  var REVEAL_ALL = reduced || params.has('all');   // ?all 一次性全部点亮，供全页截图核对
+
+  /* ---------- 开卷 ---------- */
+  var ld = document.getElementById('loader');
+  function openBook(){
+    ld.classList.add('off');
+    document.getElementById('port').classList.add('on');
+    document.getElementById('seal').classList.add('on');
+  }
+  if (REVEAL_ALL || params.has('skip')) { openBook(); }
+  else { setTimeout(openBook, 1150); }
+
+  /* ---------- 顶栏吸顶 ---------- */
+  var nav = document.getElementById('nav');
+  var prog = document.querySelector('#prog i');
+  var railNow = document.getElementById('railNow');
+  var railFill = document.querySelector('.rail-line i');
+  var tlFill = document.getElementById('tlFill');
+  var tl = tlFill ? tlFill.parentElement : null;
+
+  var ticking = false;
+  function onScroll(){
+    var y = window.scrollY || document.documentElement.scrollTop;
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var p = h > 0 ? Math.min(1, y / h) : 0;
+    prog.style.width = (p * 100).toFixed(2) + '%';
+    railFill.style.height = (p * 100).toFixed(2) + '%';
+    nav.classList.toggle('stuck', y > 12);
+    if (tl) {
+      var r = tl.getBoundingClientRect();
+      var mid = window.innerHeight * 0.62;
+      var f = (mid - r.top) / r.height;
+      tlFill.style.height = Math.max(0, Math.min(1, f)) * 100 + '%';
+    }
+    ticking = false;
+  }
+  // 同样不依赖 rAF 节流：headless 截图下 rAF 可能近乎不跑，进度条会永远停在 0
+  addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', onScroll, { passive: true });
+  onScroll();
+
+  /* ---------- 章节进场 + 竖排目录跟随 ----------
+     同理由：不用 IntersectionObserver，改在 scroll 里按矩形判定。 */
+  var secs = [].slice.call(document.querySelectorAll('.sec, .foot'));
+
+  function sectionCheck(){
+    var vh = innerHeight || document.documentElement.clientHeight;
+    var band = vh * 0.42;                      // 视口中上部那条「当前章节」判定带
+    var best = null, bestD = 1e9;
+    secs.forEach(function(s){
+      var r = s.getBoundingClientRect();
+      if (r.top < vh * 0.88) s.classList.add('on');
+      var c = r.top + Math.min(r.height, vh) / 2;
+      var d = Math.abs(c - band);
+      if (r.bottom > 0 && r.top < vh && d < bestD) { bestD = d; best = s; }
+    });
+    if (best && best.dataset.name) railNow.textContent = best.dataset.name;
+  }
+  sectionCheck();
+  addEventListener('scroll', sectionCheck, { passive: true });
+  setTimeout(sectionCheck, 1600);
+
+  /* ---------- 滚动淡入 ----------
+     ⚠️ 这里刻意不用 IntersectionObserver：headless 截图模式下 IO 回调不派发
+     （rAF 只跑 2 帧），整页会停在 opacity:0，既没法截图核对、也缺少兜底。
+     改为 rAF 里按矩形判定 + scroll 事件驱动，另加 setTimeout 兜底。 */
+  var rvs = [].slice.call(document.querySelectorAll('.rv'));
+  rvs.forEach(function(el, i){ el.style.transitionDelay = Math.min(i % 4, 3) * 65 + 'ms'; });
+
+  function reveal(el){ el.classList.add('on'); }
+  if (REVEAL_ALL) {
+    rvs.forEach(reveal);
+  } else {
+    var pending = rvs.slice();
+    var revealCheck = function(){
+      if (!pending.length) return;
+      var vh = innerHeight || document.documentElement.clientHeight;
+      var rest = [];
+      for (var i = 0; i < pending.length; i++) {
+        var r = pending[i].getBoundingClientRect();
+        if (r.top < vh * 0.92 && r.bottom > -40) { reveal(pending[i]); } else { rest.push(pending[i]); }
+      }
+      pending = rest;
+    };
+    revealCheck();
+    addEventListener('scroll', revealCheck, { passive: true });
+    addEventListener('resize', revealCheck, { passive: true });
+    setTimeout(revealCheck, 1600);   // 兜底：任何情况下内容都不会一直藏着
+  }
+
+  /* ---------- 成绩条 + 数字滚动 ---------- */
+  var G_MIN = 82;                       // 条长下限基准（88 分→35%，93 分→60%）
+  function countUp(node, to){
+    if (reduced || REVEAL_ALL) { node.textContent = to; return; }
+    var t0 = performance.now(), dur = 1150;
+    (function tick(t){
+      var k = Math.min(1, (t - t0) / dur);
+      var e = 1 - Math.pow(1 - k, 3);
+      node.textContent = Math.round(to * e);
+      if (k < 1) requestAnimationFrame(tick);
+    })(t0);
+  }
+  var gs = [].slice.call(document.querySelectorAll('.g'));
+  var gPend = gs.slice();
+  function fillGrades(){
+    if (!gPend.length) return;
+    var vh = innerHeight || document.documentElement.clientHeight;
+    var rest = [];
+    gPend.forEach(function(el){
+      var r = el.getBoundingClientRect();
+      if (r.top < vh * 0.92 && r.bottom > -40) {
+        var v = +el.dataset.v;
+        el.querySelector('.g-t i').style.width = ((v - G_MIN) / (100 - G_MIN) * 100).toFixed(1) + '%';
+        countUp(el.querySelector('.g-n'), v);
+      } else { rest.push(el); }
+    });
+    gPend = rest;
+  }
+  fillGrades();
+  addEventListener('scroll', fillGrades, { passive: true });
+  setTimeout(fillGrades, 1600);
+
+  /* ---------- 方向切换 ---------- */
+  var COPY = {
+    admin: { obj: "高校教务管理 / 教学秘书 / 行政岗。", line: 'admin' },
+    teach: { obj: "高校专任教师 / 助教（设计类）。", line: 'teach' }
+  };
+  var objText = document.getElementById('objText');
+  // 全页取：自我评价在 #evBox 内，岗位适配说明在 #s-match 内，两处都要跟着方向切
+  var evBoxes = [].slice.call(document.querySelectorAll('.ev-b'));
+  var sws = [].slice.call(document.querySelectorAll('.sw-b'));
+
+  function setDir(d){
+    document.documentElement.setAttribute('data-dir', d);
+    document.body.setAttribute('data-dir', d);
+    sws.forEach(function(b){ b.setAttribute('aria-selected', String(b.dataset.d === d)); });
+    objText.textContent = COPY[d].obj;
+    evBoxes.forEach(function(b){ b.hidden = b.dataset.line !== d; });
+    try { localStorage.setItem('zkx-dir', d); } catch(e){}
+  }
+  sws.forEach(function(b){ b.addEventListener('click', function(){ setDir(b.dataset.d); }); });
+
+  var saved = null;
+  try { saved = localStorage.getItem('zkx-dir'); } catch(e){}
+  setDir(saved === 'teach' ? 'teach' : 'admin');
+})();
+</script>
+</body>
+</html>
